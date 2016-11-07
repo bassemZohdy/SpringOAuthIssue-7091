@@ -1,0 +1,8 @@
+This project for demonstrate the issue:
+https://github.com/spring-projects/spring-boot/issues/7091
+
+please check class MyOAuth2AuthorizationServerConfiguration
+if you removed/comment lines 29-31 the token generated is default one not JWT
+
+you can get token using curl as:
+curl client-id:password@localhost:8081/oauth/token -d grant_type=password -d username=user -d password=password
